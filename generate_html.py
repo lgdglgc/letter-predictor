@@ -112,11 +112,16 @@ def render_ticket(ticket, idx):
 
     card_class = "ticket-card anti-card" if ticket["is_anti"] else "ticket-card"
 
+    reds_str = " ".join(f"{b:02d}" for b in ticket["red_balls"])
+    blue_str = f"{ticket['blue_ball']:02d}"
+    copy_text = f"{reds_str} + {blue_str}"
+
     return f"""
     <div class="{card_class}">
       <div class="ticket-header">
         <span class="ticket-num">第 {idx} 注</span>
         {badge}
+        <button class="copy-btn" data-nums="{copy_text}" onclick="copyNumbers(this)">复制</button>
       </div>
       <div class="balls-row">
         {red_html}
@@ -330,6 +335,16 @@ def generate_html(archive_dir="prediction_archive", output="docs/index.html"):
       border: 1px solid rgba(6,182,212,0.25);
     }}
 
+    /* copy btn */
+    .copy-btn {{
+      margin-left: auto; background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1); color: var(--text-muted);
+      padding: 3px 10px; border-radius: 6px; font-size: 11px;
+      cursor: pointer; transition: all 0.2s;
+    }}
+    .copy-btn:hover {{ background: rgba(255,255,255,0.15); color: var(--text); }}
+    .copy-btn.copied {{ background: var(--accent2); border-color: var(--accent2); color: #fff; }}
+
     /* contrib */
     .contrib-row {{ display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }}
     .contrib {{
@@ -420,6 +435,20 @@ def generate_html(archive_dir="prediction_archive", output="docs/index.html"):
   </footer>
 
 </div>
+<script>
+function copyNumbers(btn) {{
+  const nums = btn.getAttribute('data-nums');
+  navigator.clipboard.writeText(nums).then(() => {{
+    const originalText = btn.innerText;
+    btn.innerText = '已复制';
+    btn.classList.add('copied');
+    setTimeout(() => {{
+      btn.innerText = originalText;
+      btn.classList.remove('copied');
+    }}, 2000);
+  }});
+}}
+</script>
 </body>
 </html>"""
 
