@@ -1,0 +1,62 @@
+name: 双色球自动预测
+
+on:
+  schedule:
+    # 每周二、四、六 北京时间 22:30（UTC 14:30）开奖后自动运行
+    - cron: '30 14 * * 2,4,6'
+  workflow_dispatch:
+    # 允许在 GitHub 网页上手动触发（测试用）
+
+jobs:
+  predict:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      # 1. 拉取代码（含写权限，用于回推结果）
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # 2. 安装 Python 3.11
+      - name: 配置 Python 环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      # 3. 安装 Python 依赖
+      - name: 安装 Python 依赖
+        run: pip install -r requirements.txt
+
+      # 4. 安装 Playwright + Chromium（含系统依赖）
+      - name: 安装 Playwright Chromium
+        run: playwright install chromium --with-deps
+
+      # 5. 更新开奖数据
+      - name: 更新开奖数据
+        run: python update_data.py
+
+      # 6. 生成本期预测（5张票）
+      - name: 生成预测
+        run: python predict.py --mode team --num 5
+
+      # 7. 回测分析，导出自学习补丁
+      - name: 存档分析 & 导出补丁
+        run: |
+          python analyze_archive.py \
+            --archive-dir prediction_archive \
+            --export-prefix prediction_archive/analysis_report \
+            --latest-patch-path config/weight_patch.latest.json \
+            --latest-matrix-patch-path config/matrix_patch.latest.json \
+            --latest-param-patch-path config/param_patch.latest.json
+
+      # 8. 将新数据、存档、补丁提交回 GitHub
+      - name: 提交结果到仓库
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add lottery_data.json prediction_archive/ config/
+          git diff --staged --quiet || git commit -m "auto: 自动预测 $(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M CST')"
+          git push
