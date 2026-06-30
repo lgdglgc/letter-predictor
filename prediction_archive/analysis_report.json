@@ -2,193 +2,193 @@
   "all_time_ranking": [
     {
       "agent": "zone",
-      "score": 65.742528,
-      "source_share": 0.8343,
-      "source_count": 151
-    },
-    {
-      "agent": "sum",
-      "score": 48.71831,
-      "source_share": 0.8287,
-      "source_count": 150
-    },
-    {
-      "agent": "hot",
-      "score": 38.74112,
-      "source_share": 0.9171,
-      "source_count": 166
-    },
-    {
-      "agent": "cycle",
-      "score": 32.876938,
-      "source_share": 0.8619,
-      "source_count": 156
-    },
-    {
-      "agent": "missing",
-      "score": 15.002685,
-      "source_share": 0.895,
-      "source_count": 162
-    },
-    {
-      "agent": "random",
-      "score": 13.005788,
-      "source_share": 0.895,
-      "source_count": 162
-    },
-    {
-      "agent": "balanced",
-      "score": 11.237105,
-      "source_share": 0.8564,
+      "score": 75.437528,
+      "source_share": 0.8333,
       "source_count": 155
     },
     {
+      "agent": "sum",
+      "score": 54.697783,
+      "source_share": 0.828,
+      "source_count": 154
+    },
+    {
+      "agent": "hot",
+      "score": 44.832623,
+      "source_share": 0.914,
+      "source_count": 170
+    },
+    {
+      "agent": "cycle",
+      "score": 36.033654,
+      "source_share": 0.8548,
+      "source_count": 159
+    },
+    {
+      "agent": "missing",
+      "score": 16.22519,
+      "source_share": 0.8925,
+      "source_count": 166
+    },
+    {
+      "agent": "random",
+      "score": 14.200174,
+      "source_share": 0.8925,
+      "source_count": 166
+    },
+    {
+      "agent": "balanced",
+      "score": 12.262286,
+      "source_share": 0.8495,
+      "source_count": 158
+    },
+    {
       "agent": "cold",
-      "score": 8.87259,
-      "source_share": 0.7901,
-      "source_count": 143
+      "score": 9.759112,
+      "source_share": 0.7903,
+      "source_count": 147
     }
   ],
   "recent_ranking": [
     {
       "agent": "zone",
-      "score": 23.23,
+      "score": 29.845,
       "source_share": 0.8,
       "source_count": 16
     },
     {
       "agent": "sum",
-      "score": 14.333324,
+      "score": 17.675415,
       "source_share": 0.75,
       "source_count": 15
     },
     {
       "agent": "hot",
-      "score": 12.854325,
+      "score": 17.479999,
       "source_share": 0.8,
       "source_count": 16
     },
     {
       "agent": "cycle",
-      "score": 9.375197,
-      "source_share": 0.7,
-      "source_count": 14
+      "score": 10.998428,
+      "source_share": 0.65,
+      "source_count": 13
     },
     {
       "agent": "missing",
-      "score": 4.626345,
+      "score": 5.84885,
       "source_share": 0.8,
       "source_count": 16
     },
     {
       "agent": "random",
-      "score": 3.544332,
+      "score": 4.235894,
       "source_share": 0.8,
       "source_count": 16
     },
     {
       "agent": "balanced",
-      "score": 2.809913,
+      "score": 3.512014,
       "source_share": 0.7,
       "source_count": 14
     },
     {
       "agent": "cold",
-      "score": 2.491259,
-      "source_share": 0.5,
-      "source_count": 10
+      "score": 2.93506,
+      "source_share": 0.55,
+      "source_count": 11
     }
   ],
   "delta_ranking": [
     {
       "agent": "cold",
-      "recent_score": 2.491259,
-      "all_time_score": 8.87259,
-      "delta": -6.381331
+      "recent_score": 2.93506,
+      "all_time_score": 9.759112,
+      "delta": -6.824052
     },
     {
       "agent": "balanced",
-      "recent_score": 2.809913,
-      "all_time_score": 11.237105,
-      "delta": -8.427192
+      "recent_score": 3.512014,
+      "all_time_score": 12.262286,
+      "delta": -8.750272
     },
     {
       "agent": "random",
-      "recent_score": 3.544332,
-      "all_time_score": 13.005788,
-      "delta": -9.461456
+      "recent_score": 4.235894,
+      "all_time_score": 14.200174,
+      "delta": -9.96428
     },
     {
       "agent": "missing",
-      "recent_score": 4.626345,
-      "all_time_score": 15.002685,
+      "recent_score": 5.84885,
+      "all_time_score": 16.22519,
       "delta": -10.37634
     },
     {
       "agent": "cycle",
-      "recent_score": 9.375197,
-      "all_time_score": 32.876938,
-      "delta": -23.501741
+      "recent_score": 10.998428,
+      "all_time_score": 36.033654,
+      "delta": -25.035226
     },
     {
       "agent": "hot",
-      "recent_score": 12.854325,
-      "all_time_score": 38.74112,
-      "delta": -25.886795
+      "recent_score": 17.479999,
+      "all_time_score": 44.832623,
+      "delta": -27.352624
     },
     {
       "agent": "sum",
-      "recent_score": 14.333324,
-      "all_time_score": 48.71831,
-      "delta": -34.384986
+      "recent_score": 17.675415,
+      "all_time_score": 54.697783,
+      "delta": -37.022368
     },
     {
       "agent": "zone",
-      "recent_score": 23.23,
-      "all_time_score": 65.742528,
-      "delta": -42.512528
+      "recent_score": 29.845,
+      "all_time_score": 75.437528,
+      "delta": -45.592528
     }
   ],
   "weight_adjustments": [
     {
       "agent": "cold",
-      "delta": -6.381331,
-      "weight_delta": 0.0065
+      "delta": -6.824052,
+      "weight_delta": 0.0064
     },
     {
       "agent": "balanced",
-      "delta": -8.427192,
-      "weight_delta": 0.0055
+      "delta": -8.750272,
+      "weight_delta": 0.0056
     },
     {
       "agent": "random",
-      "delta": -9.461456,
+      "delta": -9.96428,
       "weight_delta": 0.005
     },
     {
       "agent": "missing",
       "delta": -10.37634,
-      "weight_delta": 0.0046
+      "weight_delta": 0.0048
     },
     {
       "agent": "cycle",
-      "delta": -23.501741,
+      "delta": -25.035226,
       "weight_delta": -0.0016
     },
     {
       "agent": "hot",
-      "delta": -25.886795,
-      "weight_delta": -0.0027
+      "delta": -27.352624,
+      "weight_delta": -0.0026
     },
     {
       "agent": "sum",
-      "delta": -34.384986,
-      "weight_delta": -0.0067
+      "delta": -37.022368,
+      "weight_delta": -0.0068
     },
     {
       "agent": "zone",
-      "delta": -42.512528,
-      "weight_delta": -0.0105
+      "delta": -45.592528,
+      "weight_delta": -0.0106
     }
   ],
   "matrix_ranking": [
