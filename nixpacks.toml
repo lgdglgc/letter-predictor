@@ -1,0 +1,30 @@
+[phases.setup]
+# 安装 Chromium 系统依赖（Playwright 需要）
+nixPkgs = [
+  "chromium",
+  "nss",
+  "nspr",
+  "atk",
+  "at-spi2-atk",
+  "libdrm",
+  "libxkbcommon",
+  "libXcomposite",
+  "libXdamage",
+  "libXfixes",
+  "libXrandr",
+  "mesa",
+  "alsa-lib",
+  "pango",
+  "cairo",
+  "cups",
+  "dbus"
+]
+
+[phases.install]
+cmds = [
+  "pip install -r requirements.txt",
+  "playwright install chromium"
+]
+
+[start]
+cmd = "echo 'Railway lottery predictor ready'"

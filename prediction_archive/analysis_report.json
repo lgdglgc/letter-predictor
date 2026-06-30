@@ -1,0 +1,252 @@
+{
+  "all_time_ranking": [
+    {
+      "agent": "zone",
+      "score": 40.888566,
+      "source_share": 0.8538,
+      "source_count": 111
+    },
+    {
+      "agent": "sum",
+      "score": 34.990606,
+      "source_share": 0.8692,
+      "source_count": 113
+    },
+    {
+      "agent": "hot",
+      "score": 19.613764,
+      "source_share": 0.9769,
+      "source_count": 127
+    },
+    {
+      "agent": "cycle",
+      "score": 18.04864,
+      "source_share": 0.9077,
+      "source_count": 118
+    },
+    {
+      "agent": "missing",
+      "score": 15.497649,
+      "source_share": 0.9462,
+      "source_count": 123
+    },
+    {
+      "agent": "random",
+      "score": 9.175667,
+      "source_share": 0.9385,
+      "source_count": 122
+    },
+    {
+      "agent": "balanced",
+      "score": 7.738606,
+      "source_share": 0.9,
+      "source_count": 117
+    },
+    {
+      "agent": "cold",
+      "score": 6.256848,
+      "source_share": 0.7769,
+      "source_count": 101
+    }
+  ],
+  "recent_ranking": [
+    {
+      "agent": "sum",
+      "score": 5.177445,
+      "source_share": 1.0,
+      "source_count": 20
+    },
+    {
+      "agent": "hot",
+      "score": 4.518375,
+      "source_share": 1.0,
+      "source_count": 20
+    },
+    {
+      "agent": "zone",
+      "score": 3.86592,
+      "source_share": 1.0,
+      "source_count": 20
+    },
+    {
+      "agent": "cycle",
+      "score": 2.425767,
+      "source_share": 1.0,
+      "source_count": 20
+    },
+    {
+      "agent": "balanced",
+      "score": 1.067262,
+      "source_share": 1.0,
+      "source_count": 20
+    },
+    {
+      "agent": "missing",
+      "score": 1.040055,
+      "source_share": 1.0,
+      "source_count": 20
+    },
+    {
+      "agent": "random",
+      "score": 0.65709,
+      "source_share": 1.0,
+      "source_count": 20
+    },
+    {
+      "agent": "cold",
+      "score": 0.512301,
+      "source_share": 0.75,
+      "source_count": 15
+    }
+  ],
+  "delta_ranking": [
+    {
+      "agent": "cold",
+      "recent_score": 0.512301,
+      "all_time_score": 6.256848,
+      "delta": -5.744547
+    },
+    {
+      "agent": "balanced",
+      "recent_score": 1.067262,
+      "all_time_score": 7.738606,
+      "delta": -6.671344
+    },
+    {
+      "agent": "random",
+      "recent_score": 0.65709,
+      "all_time_score": 9.175667,
+      "delta": -8.518577
+    },
+    {
+      "agent": "missing",
+      "recent_score": 1.040055,
+      "all_time_score": 15.497649,
+      "delta": -14.457594
+    },
+    {
+      "agent": "hot",
+      "recent_score": 4.518375,
+      "all_time_score": 19.613764,
+      "delta": -15.095389
+    },
+    {
+      "agent": "cycle",
+      "recent_score": 2.425767,
+      "all_time_score": 18.04864,
+      "delta": -15.622873
+    },
+    {
+      "agent": "sum",
+      "recent_score": 5.177445,
+      "all_time_score": 34.990606,
+      "delta": -29.813161
+    },
+    {
+      "agent": "zone",
+      "recent_score": 3.86592,
+      "all_time_score": 40.888566,
+      "delta": -37.022646
+    }
+  ],
+  "weight_adjustments": [
+    {
+      "agent": "cold",
+      "delta": -5.744547,
+      "weight_delta": 0.0059
+    },
+    {
+      "agent": "balanced",
+      "delta": -6.671344,
+      "weight_delta": 0.0054
+    },
+    {
+      "agent": "random",
+      "delta": -8.518577,
+      "weight_delta": 0.0044
+    },
+    {
+      "agent": "missing",
+      "delta": -14.457594,
+      "weight_delta": 0.0012
+    },
+    {
+      "agent": "hot",
+      "delta": -15.095389,
+      "weight_delta": 0.0008
+    },
+    {
+      "agent": "cycle",
+      "delta": -15.622873,
+      "weight_delta": 0.0006
+    },
+    {
+      "agent": "sum",
+      "delta": -29.813161,
+      "weight_delta": -0.0071
+    },
+    {
+      "agent": "zone",
+      "delta": -37.022646,
+      "weight_delta": -0.011
+    }
+  ],
+  "matrix_ranking": [
+    {
+      "matrix_type": "10_red_guard_6_to_5",
+      "row_id": 5,
+      "samples": 21,
+      "red_hit_avg": 1.142857,
+      "blue_hit_rate": 0.047619,
+      "hit_rate_ge2": 0.285714,
+      "hit_rate_ge3": 0.095238,
+      "avg_score": 1.214286
+    },
+    {
+      "matrix_type": "10_red_guard_6_to_5",
+      "row_id": 1,
+      "samples": 21,
+      "red_hit_avg": 1.0,
+      "blue_hit_rate": 0.142857,
+      "hit_rate_ge2": 0.095238,
+      "hit_rate_ge3": 0.0,
+      "avg_score": 1.214286
+    },
+    {
+      "matrix_type": "10_red_guard_6_to_5",
+      "row_id": 2,
+      "samples": 21,
+      "red_hit_avg": 1.047619,
+      "blue_hit_rate": 0.095238,
+      "hit_rate_ge2": 0.238095,
+      "hit_rate_ge3": 0.047619,
+      "avg_score": 1.190476
+    },
+    {
+      "matrix_type": "10_red_guard_6_to_5",
+      "row_id": 3,
+      "samples": 21,
+      "red_hit_avg": 0.809524,
+      "blue_hit_rate": 0.095238,
+      "hit_rate_ge2": 0.095238,
+      "hit_rate_ge3": 0.0,
+      "avg_score": 0.952381
+    },
+    {
+      "matrix_type": "10_red_guard_6_to_5",
+      "row_id": 4,
+      "samples": 21,
+      "red_hit_avg": 0.857143,
+      "blue_hit_rate": 0.0,
+      "hit_rate_ge2": 0.190476,
+      "hit_rate_ge3": 0.0,
+      "avg_score": 0.857143
+    }
+  ],
+  "suggestions": [
+    "建议提高权重倾斜：TOP3=zone,sum,hot（命中贡献累计更高；缺少真实结果时回退为 explain_json 贡献）。",
+    "建议降低或观察：BOTTOM3=random,balanced,cold（命中贡献累计偏低；缺少真实结果时回退为 explain_json 贡献）。",
+    "多样性替换触发率：0.00%（越高表示号码集中度越高，可考虑加强多样性惩罚或增加注间差异约束）。",
+    "下一步可做自动调参：把 lead_model 权重/learning_rate/decay_gamma 作为变量，按 backtest_report 的 overall 指标网格搜索。"
+  ]
+}
