@@ -54,6 +54,7 @@ def save_data(records):
 def fetch_from_500():
     """从500彩票网抓取数据"""
     records_by_period = {}
+    records = []
 
     def parse_html_table(html_text):
         parsed = {}
