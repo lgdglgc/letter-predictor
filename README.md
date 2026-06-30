@@ -1,539 +1,109 @@
-# 双色球彩票预测工具
+# 🎱 双色球彩票预测与展示系统
 
 <div align="center">
-
-# 🎱 双色球彩票预测工具
 
 ### ⚠️ 本工具仅供娱乐，不构成任何投注建议 ⚠️
 
 **彩票本质上是随机游戏，任何预测方法都不能保证中奖。请理性购彩，量力而行。**
 
-**如因违反娱乐用途使用本工具，使用者需自行承担全部责任**
-
 </div>
 
 ---
 
-## 🙏 特别感谢
-
-### 数据来源
-
-本项目的数据抓取功能依赖于以下网站提供的公开数据：
-
-- **[500彩票网](https://datachart.500.com/ssq/history/history.shtml)** - 提供双色球历史开奖数据
-
-感谢500彩票网为广大彩民提供的便利数据服务！
-
----
-
-## 简介
+## 📖 介绍
 
 这是一个基于历史数据统计的双色球彩票预测工具，使用多种算法策略生成号码推荐。数据来源于500彩票网的真实开奖记录。
 
-**新增功能**：
-- 🔬 **高级分析模块**：时间加权、关联分析、模式识别、遗传算法
-- ♻️ **自学习闭环方向**：基于归档回测持续调权调参
-- 🤖 **8-Agent团队模式**：先聚合核心号码池，再用旋转矩阵固定出票 5 注
-- 🎯 **V5 命中率优化**：蓝球去重与配置回灌、端到端 team 回测、矩阵行动态排序、位置权重前移
+本项目在原有的强大预测算法基础上，构建了一套**完全免费、全自动化**的更新与网页展示系统。无需本地手动运行，通过云端服务器定时执行预测任务，并通过精美的网页前端进行结果展示。
 
-## 功能特点
+## 🙏 致谢与声明
 
-- ✅ **真实数据**：从500彩票网自动抓取最新开奖数据
-- ✅ **增量更新**：智能合并新旧数据，保留完整历史
-- ✅ **多策略预测**：支持8种预测策略（含3种新增高级策略）
-- ✅ **团队协同**：8个AI Agent协同决策，聚合核心池后固定输出 5 注（支持 10 球/14 球两种矩阵）
-- ✅ **高级分析**：时间加权、关联分析、模式识别、遗传算法
-- ✅ **自学习闭环**：归档分析、权重补丁、参数补丁设计
-- ✅ **简单易用**：命令行操作，无需复杂配置
+- **核心算法来源**：本项目基于原作者开源的双色球预测算法代码进行二次开发。保留了原项目强大的 8-Agent 多专家协同、反共识辩论机制、自学习闭环以及旋转矩阵出票逻辑。特此向原作者的优秀开源工作表示感谢！
+- **数据来源**：感谢 [500彩票网](https://datachart.500.com/ssq/history/history.shtml) 提供的双色球历史开奖公开数据。
 
-## 快速开始
+## ✨ 本项目主要改动
+
+在原版强大的算法基础上，本项目主要增加了以下现代化工程增强：
+
+1. **自动化部署 (GitHub Actions)**：添加了自动化工作流，每周二、四、六开奖日北京时间 22:30 自动触发数据更新、预测生成和自学习分析，彻底解放双手。
+2. **预测结果网页展示 (GitHub Pages)**：新增了 `generate_html.py`，将预测结果转化为精美、现代化的暗色系交互式网页，支持手机端完美适配。
+3. **一键复制功能**：网页前端每注预测结果右侧新增了“复制”按钮，方便用户快速复制生成的号码。
+4. **网络稳定性优化**：修复了在海外服务器（如 GitHub Actions）环境抓取 500彩票网数据时因超时引发的崩溃异常，增强了代码的健壮性。
+
+## 🚀 部署方法 (完全免费)
+
+本项目完美支持零成本部署到 GitHub。
+
+### 1. 启用 GitHub Actions 自动更新
+1. 将本项目 Fork/Push 到你自己的 GitHub 仓库。
+2. 进入仓库页面的 **Actions** 选项卡。
+3. 如果看到提示，点击 **「I understand my workflows, go ahead and enable them」**。
+4. 在左侧找到 **「双色球自动预测」** 工作流，点击 **Run workflow** 进行首次手动初始化运行。
+5. 之后每周二、四、六 22:30，系统会自动抓取开奖数据、生成预测并推送到仓库。
+
+### 2. 开启网页展示 (GitHub Pages)
+1. 进入 GitHub 仓库的 **Settings** -> 左侧菜单找 **Pages**。
+2. 在 **Build and deployment** 下的 **Source**，选择 **Deploy from a branch**。
+3. 在 **Branch** 中选择 **main** 分支，文件夹选择 **`/docs`**，点击 **Save**。
+4. 等待 1-2 分钟，系统会自动分配一个网址给你（例如 `https://你的用户名.github.io/你的仓库名/`）。
+5. 打开该网址，即可看到每次自动更新的精美预测结果页面！
+
+---
+
+## 🛠️ 本地使用方法
+
+如果你希望在本地运行和调试，请参考以下流程：
 
 ### 安装依赖
-
 ```bash
-# 基础依赖
-pip install playwright
+pip install playwright bs4 requests
 playwright install chromium
 ```
 
-### 基本使用流程
-
+### 常用命令
 ```bash
-# 1. 更新数据（首次使用或开奖后）
+# 1. 更新数据（从 500彩票网 拉取）
 python update_data.py
 
-# 2. 运行预测（默认团队模式）
+# 2. 运行预测（默认团队模式，生成5注）
 python predict.py
 
-# 3. 使用高级分析
-python predict.py --advanced
+# 3. 生成最新预测网页（输出到 docs/index.html）
+python generate_html.py
 ```
 
-## 脚本说明
+---
 
-### 1. update_data.py - 数据更新脚本
+## 🧠 核心预测策略说明 (继承自原版)
 
-从500彩票网抓取最新开奖数据，增量更新到本地数据库。
-
-```bash
-python update_data.py
-```
-
-**特点**：
-- 自动增量更新（只添加新数据，保留历史数据）
-- 从500彩票网获取真实开奖数据
-- 自动去重和排序
-
-### 2. predict.py - 预测脚本
-
-基于历史数据进行号码预测。
-
-```bash
-# 默认使用团队模式，固定生成5注
-python predict.py
-
-# 使用 team-cover 实验模式，固定输出5注实验票并写入归档
-python predict.py --mode team-cover --seed 42
-
-# 使用追热策略，生成3注
-python predict.py --mode single --strategy hot --num 3
-
-# 使用所有策略
-python predict.py --mode single --all
-
-# 使用高级综合分析
-python predict.py --advanced
-
-# 查看帮助
-python predict.py --help
-
-# 运行 team 端到端矩阵回测（会实时显示进度）
-python predict.py --team-backtest --backtest-cycles 36 --seed 42
-
-# 运行 team-cover 对照回测（只读历史数据，不写归档）
-python predict.py --team-cover-backtest --backtest-cycles 36 --seed 42
-```
-
-**参数说明**：
-- `--mode, -m`: 预测模式 (`single`=单策略, `team`=团队模式，默认team, `team-cover`=覆盖优化实验模式)
-- `--strategy, -s`: 预测策略 (`hot`/`cold`/`missing`/`balanced`/`random`/`cycle`/`sum`/`zone`)
-- `--num, -n`: 生成注数（`team` / `team-cover` 模式固定输出 5 注，`single` 模式按传入值）
-- `--all, -a`: 使用所有策略
-- `--advanced, -adv`: 使用高级综合分析
-- `--learn-cycles`: 团队模式回看期数（默认24期）
-- `--seed`: 随机种子（用于复现实验）
-- `--weight-patch`: 显式指定权重补丁路径（未指定时自动尝试 `config/weight_patch.latest.json`）
-- `--team-backtest`: 运行最终 team 矩阵出票链路回测（不写归档，输出单专家口径与最终 5 注口径）
-- `--team-cover-backtest`: 运行 team-cover 实验模式对照回测（不写归档，输出 `team_cover` / `team` / `conditional_random` 三组口径）
-- `--backtest-cycles`: team 端到端回测期数（默认36期）
-
-### 3. manual_data_import.py - 手动数据导入
-
-从外部文件导入历史数据。
-
-```bash
-# 导入JSON格式
-python manual_data_import.py --json data.json
-
-# 导入CSV格式
-python manual_data_import.py --csv data.csv
-
-# 导入TXT格式
-python manual_data_import.py --txt data.txt
-```
-
-### 4. analyze_archive.py - 归档分析与补丁导出
-
-读取 `prediction_archive` 中的 `ticketN_explain_json`，并自动用本地 `lottery_data.json` 回填已开奖期的真实命中结果。分析器会输出命中贡献排行、双视角差异、建议权重增减量、矩阵行表现，并可导出报告与三类补丁；如果找不到真实结果，则回退为解释贡献统计。
-
-```bash
-# 基础分析
-python analyze_archive.py --archive-dir prediction_archive
-
-# 导出报告（生成 JSON / CSV / 三类 patch）
-python analyze_archive.py \
-  --archive-dir prediction_archive \
-  --export-prefix prediction_archive/analysis_report
-
-# 导出报告 + 写回最新补丁
-python analyze_archive.py \
-  --archive-dir prediction_archive \
-  --export-prefix prediction_archive/analysis_report \
-  --latest-patch-path config/weight_patch.latest.json \
-  --latest-matrix-patch-path config/matrix_patch.latest.json \
-  --latest-param-patch-path config/param_patch.latest.json
-```
-
-**参数说明**：
-- `--recent-limit`: 最近N张票据视角（用于“最近N期 vs 全历史”对比）
-- `--suggest-step`: 建议权重变动幅度上限（默认0.02）
-- `--export-prefix`: 导出报告路径前缀，生成以下文件：
-  - `.json`
-  - `.csv`
-  - `.weight_patch.json`
-  - `.matrix_patch.json`
-  - `.param_patch.json`
-- `--latest-patch-path`: 固定写回最新权重补丁路径（默认 `config/weight_patch.latest.json`）
-- `--latest-matrix-patch-path`: 固定写回最新矩阵补丁路径（默认 `config/matrix_patch.latest.json`）
-- `--latest-param-patch-path`: 固定写回最新参数补丁路径（默认 `config/param_patch.latest.json`）
-
-**补丁文件说明**：
-- `weight patch`：用于调整 8 位专家的基础权重，优先基于真实命中贡献生成
-- `matrix patch`：用于记录矩阵行表现与行权重
-- `param patch`：用于回灌核心池大小、出票衰减参数和完整矩阵偏好顺序
-
-## 预测策略
-
-### 基础策略（5种）
+本工具由 **8 个 AI Agent** 团队协同工作：
 
 | 策略 | 名称 | 说明 |
 |------|------|------|
 | `hot` | 追热策略 | 选择近期出现频率最高的号码 |
 | `cold` | 追冷策略 | 选择出现频率最低的号码 |
 | `missing` | 高遗漏策略 | 选择长期未出现的号码 |
-| `balanced` | 平衡策略 | 综合多种因素搭配号码（默认） |
+| `balanced` | 平衡策略 | 综合多种因素搭配号码 |
 | `random` | 随机策略 | 完全随机生成号码 |
-
-### 高级策略（3种，新增）
-
-| 策略 | 名称 | 说明 |
-|------|------|------|
 | `cycle` | 周期性策略 | 分析号码出现间隔的周期性规律 |
 | `sum` | 和值趋势策略 | 基于历史平均和值±标准差预测 |
-| `zone` | 区间平衡策略 | 分析1-11/12-22/23-33三区分布均衡 |
-
-## 高级分析模块
-
-### 综合分析（--advanced）
-
-使用以下4种高级分析方法融合生成预测：
-
-1. **时间加权分析** - 指数衰减权重，近期数据影响更大
-2. **号码关联分析** - 马尔可夫链 + 共现频率分析
-3. **模式识别** - 连号、同尾号、奇偶比、大小比、区间分布
-4. **遗传算法优化** - 进化算法优化号码组合
-
-```bash
-python predict.py --advanced --num 5
-```
-
-### 团队模式与自学习闭环（--mode team）
-
-`team` 模式是当前项目的主链路，由 8 个专家协同工作，并串联“出号 -> 归档 -> 分析 -> 补丁回灌”的闭环。
-
-#### 1. 团队模式流程
-
-1. 每个专家基于不同策略生成候选注
-2. 主 Agent 通过历史回测学习专家权重
-3. 系统聚合核心红球池和蓝球池
-4. 使用固定旋转矩阵输出 5 注 `6+1`
-5. 自动归档预测结果用于后续评估
-
-#### 2. 旋转矩阵出票
-
-- `team` 模式不再把专家提案直接随机打散成多注
-- 系统先汇总核心红球池（默认 10 球，可通过补丁调整为 14 球）与蓝球候选池
-- 使用固定旋转矩阵把核心池压缩为 `5` 注 `6+1`
-  - `10_red_guard_6_to_5`：10 球核心池，5 行矩阵
-  - `14_red_guard_6_to_5`：14 球核心池，5 行矩阵
-- 位置权重会前移到核心池评分阶段，真正影响候选集合
-- 这样可以尽量保留号码池价值，避免在拆票阶段把高价值号码关系随机稀释
-- **动态排序**：分析器会根据矩阵行历史表现调整优先顺序，但仍保持固定输出 5 注
-
-#### 3. 自学习闭环
-
-- 历史归档会保留每注解释信息，供后续回测分析
-- `analyze_archive.py` 负责离线学习，当前可输出命中贡献排行、双视角差异、矩阵行表现以及三类补丁
-- 分析器会根据本地真实开奖数据给旧归档临时补齐 `actual_result`，避免只按预测解释的“自我贡献”调权
-- 当前闭环已经升级为“权重 + 矩阵 + 参数”联合学习
-
-#### 4. 补丁回灌规则
-
-- `predict.py` 在 `team` 模式下会自动尝试回灌最新补丁
-- `weight patch`
-  - 支持显式指定：`--weight-patch config/weight_patch.latest.json`
-  - 未显式指定时，自动尝试 `config/weight_patch.latest.json`
-- `param patch`
-  - 当前不提供单独 CLI 参数
-  - 默认自动尝试 `config/param_patch.latest.json`
-  - 可覆盖 `blue_params`、核心池参数和融合参数
-- `matrix patch`
-  - 当前不提供单独 CLI 参数
-  - 默认自动尝试 `config/matrix_patch.latest.json`
-- 如果相关文件不存在，系统会自动回退到内置默认配置
-
-```bash
-python predict.py --mode team --num 5 --learn-cycles 24
-```
-
-### 覆盖优化实验模式（--mode team-cover）
-
-`team-cover` 是与主链路并行的实验模式，不替代默认 `team`，目标是在固定 `5` 注预算下验证“覆盖优先”的组合策略是否能稳定优于条件随机基准。
-
-- 仍复用 8 个专家提案、差异学习和补丁回灌能力
-- 不走固定旋转矩阵出票，而是先整理候选分布，再逐注生成覆盖优先的 5 注实验票
-- 会展示候选红球池与蓝球分桶，帮助观察“主攻 / 探索 / 回补”覆盖逻辑
-- **会写入** `prediction_archive/`，沿用现有精简归档格式，`lead_summary.mode=team_cover`
-
-```bash
-python predict.py --mode team-cover --num 5 --learn-cycles 24 --seed 42
-```
-
-### 覆盖优化实验回测（--team-cover-backtest）
-
-`--team-cover-backtest` 使用同一批 walk-forward 历史样本并排评估三条链路：
-
-- `team_cover`：覆盖优化实验模式
-- `team`：当前默认主链路
-- `conditional_random`：在相同候选池与注数约束下的条件随机基准
-
-输出重点：
-
-- 单注平均分
-- best-of-5 平均分
-- 红 `2+` / 红 `3+` 命中率
-- 蓝球池命中率 / 最终蓝球命中率
-- 组合平均重叠度
-- 相对条件随机基准的 uplift
-
-```bash
-python predict.py --team-cover-backtest --backtest-cycles 36 --seed 42
-```
-
-说明：
-
-- 只读历史数据，不写 `prediction_archive/`
-- 验收口径优先看相对条件随机基准的 uplift，而不是绝对预测承诺
-
-## 数据文件
-
-### lottery_data.json
-
-存储历史开奖数据，自动创建和更新。
-
-```json
-{
-  "metadata": {
-    "total_records": 105,
-    "date_range": "2025-07-24 至 2026-04-05",
-    "last_updated": "2026-04-06 14:12:34",
-    "source": "500.com-real",
-    "is_real": true
-  },
-  "records": [
-    {
-      "period": "2026037",
-      "date": "2026-04-05",
-      "red_balls": [11, 22, 27, 29, 31, 33],
-      "blue_ball": 12
-    }
-  ]
-}
-```
-
-### prediction_archive/
-
-预测归档目录，存储每期预测结果用于回测分析。
-
-### config/*.latest.json
-
-`config/` 目录用于保存当前默认回灌的最新补丁文件：
-
-- `weight_patch.latest.json`
-  - 记录专家基础权重与建议权重增减量
-  - `predict.py` 可通过 `--weight-patch` 显式指定，或默认自动发现
-- `matrix_patch.latest.json`
-  - 记录矩阵行表现、行权重与偏好行顺序
-  - `predict.py` 在 `team` 模式下默认自动发现并回灌
-- `param_patch.latest.json`
-  - 记录核心池大小、出票衰减参数与矩阵偏好参数
-  - `predict.py` 在 `team` 模式下默认自动发现并回灌
-
-如果这些文件不存在，系统会自动回退到内置默认配置，不会阻断预测。
-
-### prediction_archive/analysis_report.*
-
-当执行 `analyze_archive.py --export-prefix prediction_archive/analysis_report` 时，会生成一组分析产物：
-
-- `analysis_report.json`
-  - 结构化保存贡献排行、双视角差异、矩阵排行与建议项
-- `analysis_report.csv`
-  - 便于快速查看和外部处理的表格结果
-- `analysis_report.weight_patch.json`
-  - 本轮分析导出的权重补丁
-- `analysis_report.matrix_patch.json`
-  - 本轮分析导出的矩阵补丁
-- `analysis_report.param_patch.json`
-  - 本轮分析导出的参数补丁
-
-这些文件是“本轮分析结果”，而 `config/*.latest.json` 是“当前默认回灌入口”。
-
-## 按场景速查表
-
-| 场景 | 目标 | 推荐命令 |
-|------|------|----------|
-| 预测 | 团队模式日常预测（默认主链） | `python update_data.py`<br>`python predict.py --mode team --num 5` |
-| 预测 | 覆盖优化实验出票并归档 | `python predict.py --mode team-cover --num 5 --seed 42` |
-| 预测 | 单策略快速对比 | `python predict.py --mode single --all --num 3` |
-| 预测 | 指定策略复现实验 | `python predict.py --mode single --strategy hot --num 3 --seed 42` |
-| 分析 | 高级综合分析 | `python predict.py --advanced --num 5` |
-| 分析 | team 端到端矩阵回测（带进度） | `python predict.py --team-backtest --backtest-cycles 36 --seed 42` |
-| 分析 | team-cover 对照回测（不写归档） | `python predict.py --team-cover-backtest --backtest-cycles 36 --seed 42` |
-| 分析 | 归档贡献分析与调参建议 | `python analyze_archive.py --archive-dir prediction_archive --recent-limit 20 --top-k 10` |
-| 分析 | 导出报告并写回三类补丁 | `python analyze_archive.py --archive-dir prediction_archive --export-prefix prediction_archive/analysis_report --latest-patch-path config/weight_patch.latest.json --latest-matrix-patch-path config/matrix_patch.latest.json --latest-param-patch-path config/param_patch.latest.json` |
-| 补丁回灌 | 显式加载权重补丁参与团队预测 | `python predict.py --mode team --weight-patch config/weight_patch.latest.json --num 5` |
-| 补丁回灌 | 默认自动回灌三类补丁 | `python predict.py --mode team --num 5` |
-| 补丁回灌 | 补丁缺失时回退内置默认配置 | `python predict.py --mode team --num 5`（若 `config/*.latest.json` 不存在则自动回退） |
-
-## 文件结构
-
-```
-lottery-predictor/
-├── AGENT.md                  # 仓库内 Agent 工作说明
-├── AGENTS.md                 # 非 Claude Agent 入口说明（英文）
-├── CLAUDE.md                 # Claude Code 仓库入口说明
-├── README.md                 # 本文档
-├── SKILL.md                  # Claude 技能文档
-├── agent_registry.py         # 共享专家注册表（8 专家固定集合）
-├── analyze_archive.py        # 归档分析与补丁导出
-├── blue_ball_engine.py       # 独立蓝球预测引擎（7 维度分析）
-├── enhanced_analysis.py      # 增强分析（奖池影响、数据融合）
-├── feature_importance.py     # 特征重要性分析（相关系数）
-├── manual_data_import.py     # 手动数据导入
-├── predict.py                # 预测主脚本（team/single/team-cover 模式）
-├── project_config.py         # 全局配置中心（ProjectConfig → GLOBAL_CONFIG）
-├── update_data.py            # 数据更新脚本
-├── visual_analyzer.py        # 可视化图表生成（matplotlib 可选）
-├── lottery_data.json         # 数据文件（自动创建）
-├── test_*.py                 # 单元测试（4 个测试文件）
-├── config/
-│   ├── weight_patch.latest.json  # 最新专家权重补丁
-│   ├── matrix_patch.latest.json  # 最新矩阵补丁
-│   └── param_patch.latest.json   # 最新参数补丁
-├── docs/
-│   ├── plans/                # 历史设计文档
-│   └── superpowers/          # Superpowers 工作流产物
-└── prediction_archive/       # 预测归档目录
-    ├── YYYYXXX.txt           # 每期预测归档
-    └── analysis_report.*     # 导出的分析报告与补丁
-```
-
-## 技术说明
-
-### 系统架构
-
-```
-lottery_data.json ──→ predict.py (team 模式主链路)
-                        │
-                        ├── 1. 补丁加载: weight/matrix/param 三类补丁自动回灌
-                        ├── 2. 差异学习: 专家权重回测学习
-                        ├── 3. 8 专家提案: 各专家独立生成候选号
-                        ├── 4. 核心池聚合: 22 红球 + 10 蓝球，位置权重评分
-                        ├── 5. 反共识辩论: 专家重新评估被排除的11球 → 合并重排名
-                        ├── 6. 蓝球引擎: BlueBallEngine 多维度独立打分
-                        ├── 7. 蓝球辩论: 低分蓝球"偏科"强项晋升
-                        ├── 8. 旋转矩阵: 22 红 → 5 注 6+1
-                        └── 9. 归档: prediction_archive/YYYYXXX.txt
-
-prediction_archive/ ──→ analyze_archive.py
-                           ├── 回填真实开奖结果
-                           └── 导出三类补丁 → config/*.latest.json → 回灌
-```
-
-**自学习闭环**: `predict → archive → analyze → patches → predict`
-
-所有运行参数集中在 `project_config.py` 的 `ProjectConfig` 中管理，通过 `to_runtime_config()` 生成 pool/fusion/matrix/blue/cover 五组参数供运行时使用。蓝球引擎的 7 个维度参数统一通过 `blue_params` 字典传入 `BlueBallEngine`。
-
-**反共识辩论机制**：在核心池聚合后，系统识别被排除的 11 个红球（反共识池）。8 位专家各自用独特的策略视角（hot 看频率、cold 看冷度、missing 看遗漏、cycle 看周期、sum 看和值、zone 看区间、balanced 取平均、random 提供噪音）重新评估这些球。以 `lead_model` 权重聚合辩论意见后，与共识分数合并重排名，前 22 名进入最终池子。蓝球同理：低分蓝球若在某个维度特别突出（如遗漏极值 ≥2.0、某维度 ≥0.85），可获得晋升资格。辩论影响力由 `debate_factor` 参数控制（默认 0.6）。
-
-### 为什么这些方法"有趣"但不"有效"
-
-1. **随机性本质**：双色球开奖是独立随机事件
-2. **赌徒谬误**：认为"长期未出的号码即将出现"是认知偏差
-3. **统计规律≠预测能力**：历史数据规律不代表未来走势
-4. **大数定律**：短期预测无法突破概率极限
-
-### 算法原理
-
-#### 周期性分析（cycle）
-- 分析每个号码的出现间隔
-- 计算间隔的方差（方差越小，周期性越强）
-- 预测即将到达周期点的号码
-
-#### 和值趋势分析（sum）
-- 计算历史平均和值和标准差
-- 目标范围：平均和值 ± 1个标准差
-- 选择能使和值落入目标范围的号码组合
-
-#### 区间平衡分析（zone）
-- 分析1-11（前区）、12-22（中区）、23-33（后区）分布
-- 向理想分布2-2-2靠拢
-- 优先选择偏少区域的热号
-
-#### 自学习闭环
-- 输入：历史预测归档、真实开奖结果、专家贡献明细
-- 学习对象：专家权重、矩阵行偏好、窗口参数、融合参数
-- 输出：`weight_patch.latest.json`、`matrix_patch.latest.json`、`param_patch.latest.json`
-
-### 最佳实践
-
-1. **定期更新数据**：开奖后运行 `python update_data.py`
-2. **多样化尝试**：可以尝试不同策略增加乐趣
-3. **理性购彩**：将预测视为娱乐，而非投资
-4. **设定预算**：购彩金额不应超过娱乐预算
-5. **组合策略**：团队模式比单策略更稳定
-
-## 更新日志
-
-- **2026-05-16 (V5)**:
-  - 蓝球覆盖修复：5 注蓝球优先去重，且同样输入的蓝球选择可复现
-  - 蓝球配置回灌：`blue_params` 统一从 `project_config.py` / `param_patch` 进入 `BlueBallEngine`
-  - 新增 team 端到端矩阵回测：输出单专家口径与最终 5 注口径，支持 `--team-backtest`
-  - 回测可见性与性能优化：长回测期间输出进度，并使用轻量训练参数缩短完整回测耗时
-  - 矩阵行语义修正：从“动态淘汰”调整为“动态排序”，`row_weights` 可直接影响默认行顺序
-  - 位置权重前移：改为作用在核心池评分阶段，真正影响 `red_pool`
-- **2026-05-19 (Task5)**:
-  - 接通 `--mode team-cover` 主流程：固定输出 5 注实验票，并写入 `prediction_archive`
-  - 接通 `--team-cover-backtest` 主流程：输出 `team_cover` / `team` / `conditional_random` 三组对照与 uplift
-  - 更新 `README.md` / `SKILL.md` / `AGENTS.md`，统一实验模式归档与回测只读口径
-- **2026-05-16 (V4)**:
-  - 多样性约束修复：`_find_swap_target` → `_find_best_swap`，最优替代 + 多次迭代
-  - 蓝球双重归一化修复：删除第二次 MinMax，保留引擎原始区分度 [0.1, 3.0]
-  - 冷号配额提升：最大纳入数 1→2，bonus 1.15→1.25
-  - 回测多次采样：差异学习增加 `num_trials=10`，降低单次噪声
-  - 矩阵行动态淘汰：阈值 = 平均分 × 0.8，低表现行被排除
-  - 位置权重切片修复：排序后增加 `[:6]`，确保只取 6 个红球
-  - 参数清理：删除 `diversity_*` 死参数，统一蓝球配置到 `project_config.py`
-- **2026-04-21 (V3)**:
-  - 增加数据新鲜度保护与归档防覆盖，避免用旧数据预测或覆盖同期原始归档
-  - 移除 `LSTM/TensorFlow` 主链依赖，团队模式稳定收敛到 8 个规则型专家
-  - 团队模式升级为"核心号码池 + 旋转矩阵出票"，固定输出 5 注 `6+1`
-  - 自学习闭环扩展到三类补丁：`weight patch`、`matrix patch`、`param patch`
-  - `predict.py` 新增补丁自动回灌，形成"分析 -> 写回 -> 再预测"的闭环
-  - 新增 `AGENT.md`，并同步更新 `CLAUDE.md` 与 README 文档入口
-  - 修复 `update_data.py` 的数据范围显示顺序，统一为"旧日期 -> 新日期"
-- **2026-04-06**: 
-  - 新增3个高级Agent：周期性(cycle)、和值趋势(sum)、区间平衡(zone)
-  - 新增高级综合分析模块（时间加权、关联分析、模式识别、遗传算法）
-  - 团队模式扩展至8个Agent
-  - 优化蓝球预测逻辑
-- **2026-03-25**: 初始版本发布，支持数据自动更新和多策略预测
-
-## 许可证
-
-MIT License
+| `zone` | 区间平衡策略 | 分析三区分布均衡，向理想分布靠拢 |
+
+### 团队模式与自学习闭环
+主链路采用 `team` 模式：
+1. 8 位专家独立生成候选号。
+2. 聚合核心红球池（22球）和蓝球候选池。
+3. **反共识辩论**：重新评估落选的11球，赋予低分球晋升机会。
+4. 使用**旋转矩阵**将候选池科学压缩为固定 5 注。
+5. 自动归档并复盘历史预测，调整专家权重形成闭环。
 
 ---
 
+## 📜 许可证
+
+MIT License
+
 <div align="center">
-
-### ⚠️ 重要声明 ⚠️
-
-**本工具仅供娱乐用途**
-
-**不得用于任何形式的赌博、博彩或其他非法活动**
-
-**如因违反上述规定使用本工具，使用者需自行承担全部法律责任**
 
 **彩票中奖是小概率事件，请理性购彩，量力而行！**
 
