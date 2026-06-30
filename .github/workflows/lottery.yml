@@ -55,11 +55,15 @@ jobs:
             --latest-matrix-patch-path config/matrix_patch.latest.json \
             --latest-param-patch-path config/param_patch.latest.json
 
-      # 8. 将新数据、存档、补丁提交回 GitHub
+      # 8. 生成网页展示（GitHub Pages）
+      - name: 生成预测网页
+        run: python generate_html.py
+
+      # 9. 将新数据、存档、补丁、网页提交回 GitHub
       - name: 提交结果到仓库
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add lottery_data.json prediction_archive/ config/
+          git add lottery_data.json prediction_archive/ config/ docs/
           git diff --staged --quiet || git commit -m "auto: 自动预测 $(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M CST')"
           git push
