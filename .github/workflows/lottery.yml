@@ -7,6 +7,9 @@ on:
   workflow_dispatch:
     # 允许在 GitHub 网页上手动触发（测试用）
 
+permissions:
+  contents: write
+
 jobs:
   predict:
     runs-on: ubuntu-latest
