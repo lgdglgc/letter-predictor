@@ -2,21 +2,22 @@
   "version": 1,
   "origin": "analyze_archive",
   "pool_params": {
-    "core_red_pool_size": 10,
-    "core_blue_pool_size": 4
+    "core_red_pool_size": 24,
+    "core_blue_pool_size": 10
   },
   "fusion_params": {
-    "ticket_decay_step": 0.08,
-    "min_ticket_decay": 0.65,
+    "ticket_decay_step": 0.06,
+    "min_ticket_decay": 0.55,
+    "debate_factor": 0.9,
     "diversity_trigger_rate": 0.0
   },
   "matrix_params": {
-    "matrix_type": "10_red_guard_6_to_5",
+    "matrix_type": "22_red_cover_6_to_5",
     "preferred_rows": [
-      5,
-      1,
-      2,
       3,
+      5,
+      2,
+      1,
       4
     ]
   }
