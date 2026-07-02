@@ -11,23 +11,23 @@
     "zone"
   ],
   "recommended_base_weights": {
-    "balanced": 0.052656,
-    "cold": 0.044989,
-    "cycle": 0.145974,
-    "hot": 0.160695,
-    "missing": 0.062812,
-    "random": 0.060738,
-    "sum": 0.20073,
-    "zone": 0.271405
+    "balanced": 0.052796,
+    "cold": 0.04446,
+    "cycle": 0.143337,
+    "hot": 0.167534,
+    "missing": 0.061457,
+    "random": 0.059848,
+    "sum": 0.1968,
+    "zone": 0.273768
   },
   "weight_deltas": {
     "balanced": 0.0055,
     "cold": 0.0063,
-    "cycle": -0.0016,
+    "cycle": -0.0017,
     "hot": -0.0028,
     "missing": 0.0047,
     "random": 0.0049,
-    "sum": -0.0063,
+    "sum": -0.0064,
     "zone": -0.0108
   },
   "origin": "analyze_archive"
