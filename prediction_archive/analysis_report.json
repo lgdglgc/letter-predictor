@@ -2,151 +2,151 @@
   "all_time_ranking": [
     {
       "agent": "zone",
-      "score": 74.527264,
-      "source_share": 0.8281,
-      "source_count": 183
+      "score": 84.897264,
+      "source_share": 0.8274,
+      "source_count": 187
     },
     {
       "agent": "sum",
-      "score": 53.43859,
-      "source_share": 0.8054,
-      "source_count": 178
+      "score": 59.335594,
+      "source_share": 0.8053,
+      "source_count": 182
     },
     {
       "agent": "hot",
-      "score": 44.716536,
-      "source_share": 0.8914,
-      "source_count": 197
+      "score": 51.529616,
+      "source_share": 0.8894,
+      "source_count": 201
     },
     {
       "agent": "cycle",
-      "score": 31.180919,
-      "source_share": 0.8281,
-      "source_count": 183
+      "score": 32.240604,
+      "source_share": 0.823,
+      "source_count": 186
     },
     {
       "agent": "missing",
-      "score": 14.557506,
-      "source_share": 0.8507,
-      "source_count": 188
+      "score": 16.044394,
+      "source_share": 0.8496,
+      "source_count": 192
     },
     {
       "agent": "random",
-      "score": 13.065472,
-      "source_share": 0.8778,
-      "source_count": 194
+      "score": 13.80542,
+      "source_share": 0.8717,
+      "source_count": 197
     },
     {
       "agent": "balanced",
-      "score": 12.501059,
-      "source_share": 0.819,
-      "source_count": 181
+      "score": 13.730261,
+      "source_share": 0.8186,
+      "source_count": 185
     },
     {
       "agent": "cold",
-      "score": 8.644339,
-      "source_share": 0.7466,
-      "source_count": 165
+      "score": 9.529507,
+      "source_share": 0.7434,
+      "source_count": 168
     }
   ],
   "recent_ranking": [
     {
       "agent": "zone",
-      "score": 17.67,
-      "source_share": 0.8,
-      "source_count": 16
+      "score": 25.87,
+      "source_share": 0.85,
+      "source_count": 17
     },
     {
       "agent": "hot",
-      "score": 10.940983,
-      "source_share": 0.8,
-      "source_count": 16
+      "score": 16.308452,
+      "source_share": 0.85,
+      "source_count": 17
     },
     {
       "agent": "sum",
-      "score": 8.47748,
-      "source_share": 0.7,
-      "source_count": 14
-    },
-    {
-      "agent": "missing",
-      "score": 2.858806,
-      "source_share": 0.55,
-      "source_count": 11
-    },
-    {
-      "agent": "balanced",
-      "score": 2.554025,
-      "source_share": 0.7,
-      "source_count": 14
-    },
-    {
-      "agent": "random",
-      "score": 1.687124,
+      "score": 13.392987,
       "source_share": 0.8,
       "source_count": 16
     },
     {
+      "agent": "missing",
+      "score": 3.786196,
+      "source_share": 0.65,
+      "source_count": 13
+    },
+    {
+      "agent": "balanced",
+      "score": 3.432713,
+      "source_share": 0.75,
+      "source_count": 15
+    },
+    {
       "agent": "cycle",
-      "score": 1.391004,
+      "score": 2.205064,
       "source_share": 0.6,
       "source_count": 12
     },
     {
+      "agent": "random",
+      "score": 2.161125,
+      "source_share": 0.8,
+      "source_count": 16
+    },
+    {
       "agent": "cold",
-      "score": 1.015895,
-      "source_share": 0.55,
-      "source_count": 11
+      "score": 1.901063,
+      "source_share": 0.65,
+      "source_count": 13
     }
   ],
   "delta_ranking": [
     {
       "agent": "cold",
-      "recent_score": 1.015895,
-      "all_time_score": 8.644339,
+      "recent_score": 1.901063,
+      "all_time_score": 9.529507,
       "delta": -7.628444
     },
     {
       "agent": "balanced",
-      "recent_score": 2.554025,
-      "all_time_score": 12.501059,
-      "delta": -9.947034
+      "recent_score": 3.432713,
+      "all_time_score": 13.730261,
+      "delta": -10.297548
     },
     {
       "agent": "random",
-      "recent_score": 1.687124,
-      "all_time_score": 13.065472,
-      "delta": -11.378348
+      "recent_score": 2.161125,
+      "all_time_score": 13.80542,
+      "delta": -11.644295
     },
     {
       "agent": "missing",
-      "recent_score": 2.858806,
-      "all_time_score": 14.557506,
-      "delta": -11.6987
+      "recent_score": 3.786196,
+      "all_time_score": 16.044394,
+      "delta": -12.258198
     },
     {
       "agent": "cycle",
-      "recent_score": 1.391004,
-      "all_time_score": 31.180919,
-      "delta": -29.789915
+      "recent_score": 2.205064,
+      "all_time_score": 32.240604,
+      "delta": -30.03554
     },
     {
       "agent": "hot",
-      "recent_score": 10.940983,
-      "all_time_score": 44.716536,
-      "delta": -33.775553
+      "recent_score": 16.308452,
+      "all_time_score": 51.529616,
+      "delta": -35.221164
     },
     {
       "agent": "sum",
-      "recent_score": 8.47748,
-      "all_time_score": 53.43859,
-      "delta": -44.96111
+      "recent_score": 13.392987,
+      "all_time_score": 59.335594,
+      "delta": -45.942607
     },
     {
       "agent": "zone",
-      "recent_score": 17.67,
-      "all_time_score": 74.527264,
-      "delta": -56.857264
+      "recent_score": 25.87,
+      "all_time_score": 84.897264,
+      "delta": -59.027264
     }
   ],
   "weight_adjustments": [
@@ -157,38 +157,38 @@
     },
     {
       "agent": "balanced",
-      "delta": -9.947034,
-      "weight_delta": 0.0056
+      "delta": -10.297548,
+      "weight_delta": 0.0055
     },
     {
       "agent": "random",
-      "delta": -11.378348,
+      "delta": -11.644295,
       "weight_delta": 0.0051
     },
     {
       "agent": "missing",
-      "delta": -11.6987,
-      "weight_delta": 0.005
+      "delta": -12.258198,
+      "weight_delta": 0.0048
     },
     {
       "agent": "cycle",
-      "delta": -29.789915,
-      "weight_delta": -0.0014
+      "delta": -30.03554,
+      "weight_delta": -0.0012
     },
     {
       "agent": "hot",
-      "delta": -33.775553,
-      "weight_delta": -0.0028
+      "delta": -35.221164,
+      "weight_delta": -0.0029
     },
     {
       "agent": "sum",
-      "delta": -44.96111,
-      "weight_delta": -0.0067
+      "delta": -45.942607,
+      "weight_delta": -0.0066
     },
     {
       "agent": "zone",
-      "delta": -56.857264,
-      "weight_delta": -0.0109
+      "delta": -59.027264,
+      "weight_delta": -0.011
     }
   ],
   "matrix_ranking": [
