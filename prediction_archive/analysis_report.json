@@ -2,193 +2,193 @@
   "all_time_ranking": [
     {
       "agent": "zone",
-      "score": 76.712264,
-      "source_share": 0.8268,
-      "source_count": 191
+      "score": 77.179868,
+      "source_share": 0.8263,
+      "source_count": 195
     },
     {
       "agent": "sum",
-      "score": 56.743597,
-      "source_share": 0.8052,
-      "source_count": 186
+      "score": 56.46048,
+      "source_share": 0.8008,
+      "source_count": 189
     },
     {
       "agent": "hot",
-      "score": 47.232135,
-      "source_share": 0.8874,
-      "source_count": 205
+      "score": 45.894804,
+      "source_share": 0.8814,
+      "source_count": 208
     },
     {
       "agent": "cycle",
-      "score": 32.536755,
-      "source_share": 0.8182,
-      "source_count": 189
+      "score": 32.358287,
+      "source_share": 0.8136,
+      "source_count": 192
     },
     {
       "agent": "missing",
-      "score": 15.261288,
-      "source_share": 0.8485,
-      "source_count": 196
+      "score": 15.251544,
+      "source_share": 0.8475,
+      "source_count": 200
     },
     {
       "agent": "random",
-      "score": 13.728325,
-      "source_share": 0.8701,
-      "source_count": 201
+      "score": 13.431903,
+      "source_share": 0.8686,
+      "source_count": 205
     },
     {
       "agent": "balanced",
-      "score": 13.15306,
-      "source_share": 0.8182,
-      "source_count": 189
+      "score": 13.028659,
+      "source_share": 0.8136,
+      "source_count": 192
     },
     {
       "agent": "cold",
-      "score": 8.643833,
-      "source_share": 0.7403,
-      "source_count": 171
+      "score": 9.139129,
+      "source_share": 0.7373,
+      "source_count": 174
     }
   ],
   "recent_ranking": [
     {
       "agent": "zone",
-      "score": 15.97,
+      "score": 14.032604,
       "source_share": 0.8,
       "source_count": 16
     },
     {
       "agent": "hot",
-      "score": 9.995105,
-      "source_share": 0.8,
-      "source_count": 16
+      "score": 7.967712,
+      "source_share": 0.75,
+      "source_count": 15
     },
     {
       "agent": "sum",
-      "score": 8.920207,
+      "score": 6.98406,
+      "source_share": 0.7,
+      "source_count": 14
+    },
+    {
+      "agent": "missing",
+      "score": 2.333811,
       "source_share": 0.75,
       "source_count": 15
     },
     {
       "agent": "balanced",
-      "score": 2.504998,
-      "source_share": 0.8,
-      "source_count": 16
-    },
-    {
-      "agent": "missing",
-      "score": 2.441146,
-      "source_share": 0.7,
-      "source_count": 14
-    },
-    {
-      "agent": "cycle",
-      "score": 2.024668,
-      "source_share": 0.5,
-      "source_count": 10
-    },
-    {
-      "agent": "random",
-      "score": 1.761434,
+      "score": 1.948091,
       "source_share": 0.75,
       "source_count": 15
     },
     {
+      "agent": "cycle",
+      "score": 1.8462,
+      "source_share": 0.5,
+      "source_count": 10
+    },
+    {
       "agent": "cold",
-      "score": 1.015389,
-      "source_share": 0.65,
-      "source_count": 13
+      "score": 1.301935,
+      "source_share": 0.6,
+      "source_count": 12
+    },
+    {
+      "agent": "random",
+      "score": 1.219826,
+      "source_share": 0.75,
+      "source_count": 15
     }
   ],
   "delta_ranking": [
     {
       "agent": "cold",
-      "recent_score": 1.015389,
-      "all_time_score": 8.643833,
-      "delta": -7.628444
+      "recent_score": 1.301935,
+      "all_time_score": 9.139129,
+      "delta": -7.837194
     },
     {
       "agent": "balanced",
-      "recent_score": 2.504998,
-      "all_time_score": 13.15306,
-      "delta": -10.648062
+      "recent_score": 1.948091,
+      "all_time_score": 13.028659,
+      "delta": -11.080568
     },
     {
       "agent": "random",
-      "recent_score": 1.761434,
-      "all_time_score": 13.728325,
-      "delta": -11.966891
+      "recent_score": 1.219826,
+      "all_time_score": 13.431903,
+      "delta": -12.212077
     },
     {
       "agent": "missing",
-      "recent_score": 2.441146,
-      "all_time_score": 15.261288,
-      "delta": -12.820142
+      "recent_score": 2.333811,
+      "all_time_score": 15.251544,
+      "delta": -12.917733
     },
     {
       "agent": "cycle",
-      "recent_score": 2.024668,
-      "all_time_score": 32.536755,
+      "recent_score": 1.8462,
+      "all_time_score": 32.358287,
       "delta": -30.512087
     },
     {
       "agent": "hot",
-      "recent_score": 9.995105,
-      "all_time_score": 47.232135,
-      "delta": -37.23703
+      "recent_score": 7.967712,
+      "all_time_score": 45.894804,
+      "delta": -37.927092
     },
     {
       "agent": "sum",
-      "recent_score": 8.920207,
-      "all_time_score": 56.743597,
-      "delta": -47.82339
+      "recent_score": 6.98406,
+      "all_time_score": 56.46048,
+      "delta": -49.47642
     },
     {
       "agent": "zone",
-      "recent_score": 15.97,
-      "all_time_score": 76.712264,
-      "delta": -60.742264
+      "recent_score": 14.032604,
+      "all_time_score": 77.179868,
+      "delta": -63.147264
     }
   ],
   "weight_adjustments": [
     {
       "agent": "cold",
-      "delta": -7.628444,
-      "weight_delta": 0.0065
+      "delta": -7.837194,
+      "weight_delta": 0.0064
     },
     {
       "agent": "balanced",
-      "delta": -10.648062,
-      "weight_delta": 0.0055
+      "delta": -11.080568,
+      "weight_delta": 0.0054
     },
     {
       "agent": "random",
-      "delta": -11.966891,
-      "weight_delta": 0.0051
+      "delta": -12.212077,
+      "weight_delta": 0.005
     },
     {
       "agent": "missing",
-      "delta": -12.820142,
+      "delta": -12.917733,
       "weight_delta": 0.0048
     },
     {
       "agent": "cycle",
       "delta": -30.512087,
-      "weight_delta": -0.001
+      "weight_delta": -0.0008
     },
     {
       "agent": "hot",
-      "delta": -37.23703,
-      "weight_delta": -0.0033
+      "delta": -37.927092,
+      "weight_delta": -0.0031
     },
     {
       "agent": "sum",
-      "delta": -47.82339,
-      "weight_delta": -0.0067
+      "delta": -49.47642,
+      "weight_delta": -0.0068
     },
     {
       "agent": "zone",
-      "delta": -60.742264,
-      "weight_delta": -0.011
+      "delta": -63.147264,
+      "weight_delta": -0.0111
     }
   ],
   "matrix_ranking": [
@@ -203,6 +203,16 @@
       "avg_score": 1.833333
     },
     {
+      "matrix_type": "22_red_cover_6_to_5",
+      "row_id": 5,
+      "samples": 21,
+      "red_hit_avg": 1.238095,
+      "blue_hit_rate": 0.047619,
+      "hit_rate_ge2": 0.238095,
+      "hit_rate_ge3": 0.142857,
+      "avg_score": 1.309524
+    },
+    {
       "matrix_type": "10_red_guard_6_to_5",
       "row_id": 5,
       "samples": 19,
@@ -215,22 +225,12 @@
     {
       "matrix_type": "22_red_cover_6_to_5",
       "row_id": 4,
-      "samples": 20,
-      "red_hit_avg": 1.25,
+      "samples": 21,
+      "red_hit_avg": 1.190476,
       "blue_hit_rate": 0.0,
-      "hit_rate_ge2": 0.4,
-      "hit_rate_ge3": 0.1,
-      "avg_score": 1.25
-    },
-    {
-      "matrix_type": "22_red_cover_6_to_5",
-      "row_id": 5,
-      "samples": 20,
-      "red_hit_avg": 1.25,
-      "blue_hit_rate": 0.0,
-      "hit_rate_ge2": 0.25,
-      "hit_rate_ge3": 0.15,
-      "avg_score": 1.25
+      "hit_rate_ge2": 0.380952,
+      "hit_rate_ge3": 0.095238,
+      "avg_score": 1.190476
     },
     {
       "matrix_type": "10_red_guard_6_to_5",
@@ -245,12 +245,12 @@
     {
       "matrix_type": "22_red_cover_6_to_5",
       "row_id": 1,
-      "samples": 20,
-      "red_hit_avg": 1.1,
+      "samples": 21,
+      "red_hit_avg": 1.095238,
       "blue_hit_rate": 0.0,
-      "hit_rate_ge2": 0.3,
+      "hit_rate_ge2": 0.285714,
       "hit_rate_ge3": 0.0,
-      "avg_score": 1.1
+      "avg_score": 1.095238
     },
     {
       "matrix_type": "10_red_guard_6_to_5",
@@ -275,12 +275,12 @@
     {
       "matrix_type": "22_red_cover_6_to_5",
       "row_id": 2,
-      "samples": 20,
-      "red_hit_avg": 0.85,
-      "blue_hit_rate": 0.05,
-      "hit_rate_ge2": 0.15,
+      "samples": 21,
+      "red_hit_avg": 0.809524,
+      "blue_hit_rate": 0.047619,
+      "hit_rate_ge2": 0.142857,
       "hit_rate_ge3": 0.0,
-      "avg_score": 0.925
+      "avg_score": 0.880952
     },
     {
       "matrix_type": "10_red_guard_6_to_5",
